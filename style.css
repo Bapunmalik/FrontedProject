@@ -1,16 +1,19 @@
 .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
     @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;1,500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 *{
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Bai Jamjuree', sans-serif;
-    font-size: 18px;
-    padding: 5px;
-}   
+    padding: 6px;
+} 
+body{
+    font-family: 'Poppins',Bai Jamjuree, sans-serif;
+}
+a{text-decoration: none;}  
 header{
     background: url(images/bg-header-mobile.png);
-    min-height: 100vh;
+    min-height: 48vh;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -26,19 +29,19 @@ header{
     width: 150px;
     height: 150px;
 }
-.intro-container h1{
-    font-size: 2.2rem;
+h1{
     color: hsl(210, 10%, 33%);
+    font-size: 1.8rem;
+    font-weight: 600;
 }
-.intro-container .buttons{
-        display: flex;
-        flex-direction: column;
+.buttons{
         width: 90%;
 }
-.intro-color p{
+p{
     color:hsl(201, 11%, 66%);
+    font-weight: 400;
 }
-.intro-container button{
+button{
     background-color: hsl(171, 66%, 44%);
     padding: 13px;
     color: white;
@@ -47,12 +50,18 @@ header{
     border: none;
     margin-bottom: 15px;
 }
+button:hover{
+    cursor: pointer;
+}
 #mac{
     box-shadow: 0px 2px 7px #5748f8;
     background-color: hsl(233, 100%, 69%);
     border-bottom: 1.2px solid rgb(50, 36, 248);
 }
-
+#ios{
+    box-shadow: 0px 2px 7px #7cad7f;
+    border-bottom: 1.2px solid hsl(171, 66%, 44%);
+}
 .track {
     text-align: center;
     margin: 25px;
@@ -67,7 +76,6 @@ header{
 .feature{
     text-align: center;
     padding: 10px;
-    line-height: 1.4;
     color:hsl(201, 11%, 66%)
 }
 .feature h2{
@@ -85,4 +93,100 @@ header{
 
 .feature-section{
     margin: 30px 0;
+}
+
+.mid{
+    text-align: center;
+}
+.mid div{
+    margin: 30px;
+}
+h2{
+    font-size: 1.6rem;
+    color: hsl(210, 10%, 33%);
+}
+
+.element{
+    text-align: center;
+}
+.element div{
+    margin: 10px;
+}
+.element img{
+    margin: 30px;
+}
+.logos{
+    margin: 60px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 30px;
+}
+.bottom-part{
+    text-align: center;
+    margin: 60px 20px;
+}
+.project{
+    text-align: center;
+    background-color: hsla(201, 11%, 66%,0.1);
+}
+.logo img{
+    width: 80px;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+}
+.links a{
+    color: hsl(201, 11%, 66%);
+    margin: 5px;
+}
+
+@media screen and (min-width:580px) {
+        .feature{
+            width: 90%;
+            /* margin: auto; */
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            column-gap: 100px;
+            justify-items: center;
+            align-items: center;
+        }
+        .feature img{
+            grid-column: 1/2;
+            grid-row: span 3;
+        }
+        .feature div{
+            align-self:first baseline;
+            text-align: left;
+            padding: 0;
+            width: 100%;
+        }
+        .feature h2{
+            text-align: left;
+        }
+        .buttons{
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+            width: 40%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        buttons{
+            width: 100%;
+        }
+       .intro-container{
+        height: 70vh;
+       }
+       .logos{
+        display: flex;
+        flex-direction: row;
+       }
+       .bottom-part .buttons{
+            margin: 0 auto;
+            gap: 20px;
+       }
 }
